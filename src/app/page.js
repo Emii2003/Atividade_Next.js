@@ -9,31 +9,7 @@ const Home = () => {
       <ul>
         <li>
           <Link href="/produtos/Camisa">
-            Camisa
-          </Link>
-        </li>
-
-        <li>
-          <Link href="/produtos/calca">
-            Calça
-          </Link>
-        </li>
-
-        <li>
-          <Link href="/produtos/bone">
-            Boné
-          </Link>
-        </li>
-
-        <li>
-          <Link href="/produtos/sapato">
-            Sapato
-          </Link>
-        </li>
-
-        <li>
-          <Link href="/produtos/oculos">
-            Óculos
+            Veja nossos produtos..
           </Link>
         </li>
       </ul> 
