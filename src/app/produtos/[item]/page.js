@@ -1,5 +1,6 @@
 // import { useRouter } from 'next/router';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Produto({params}) {
   const { item } = params;
@@ -15,16 +16,42 @@ export default function Produto({params}) {
         height={300} 
       />
 
-      {/* <h5>{params.item}</h5> */}
+      <ul>
+      <li>
+          <Link href="/">
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link href="/produtos/Camisa">
+            Camisa
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/produtos/calca">
+            Calça
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/produtos/bone">
+            Boné
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/produtos/sapato">
+            Sapato
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/produtos/oculos">
+            Óculos
+          </Link>
+        </li>
+      </ul> 
     </>
   )
 }
-
-// export async function getServerSideProps({ params }) {
-//   const { item } = params;
-//   return {
-//     props: {
-//       item,
-//     },
-//   };
-// }
