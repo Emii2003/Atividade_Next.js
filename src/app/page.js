@@ -28,6 +28,8 @@ const styles = {
     fontSize: '32px',
     color: '#333',
     marginBottom: '20px',
+    backgroundColor: 'lightblue', 
+    padding: '10px', 
   },
   list: {
     listStyleType: 'none',
