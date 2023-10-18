@@ -6,57 +6,43 @@ export default function Produto({ params }) {
   const imagePath = `/produtos/${item}.jpg`;
 
   return (
-    <>
-      <div style={styles.container}>
-        <h1 style={styles.heading}>Produto de categoria: {params.item}</h1>
-        <div style={styles.imageContainer}>
-          <Image
-            src={imagePath}
-            alt={`Imagem de ${item}`}
-            width={300}
-            height={300}
-          />
-        </div>
-
-        <ul style={styles.linkList}>
-          <li style={styles.linkListItem}>
-            <Link href="/">
-              <span style={styles.linkButton}>Home</span>
-            </Link>
-          </li>
-          <li style={styles.linkListItem}>
-            <Link href="/produtos/Camisa">
-              <span style={styles.linkButton}>Camisa</span>
-            </Link>
-          </li>
-
-          <li style={styles.linkListItem}>
-            <Link href="/produtos/calca">
-              <span style={styles.linkButton}>Calça</span>
-            </Link>
-          </li>
-
-          <li style={styles.linkListItem}>
-            <Link href="/produtos/bone">
-              <span style={styles.linkButton}>Boné</span>
-            </Link>
-          </li>
-
-          <li style={styles.linkListItem}>
-            <Link href="/produtos/sapato">
-              <span style={styles.linkButton}>Sapato</span>
-            </Link>
-          </li>
-
-          <li style={styles.linkListItem}>
-            <Link href="/produtos/oculos">
-              <span style={styles.linkButton}>Óculos</span>
-            </Link>
-          </li>
-        </ul>
+    <div style={styles.container}>
+      <h1 style={styles.heading}>Produto de categoria: {params.item}</h1>
+      <div style={styles.imageContainer}>
+        <Image
+          src={imagePath}
+          alt={`Imagem de ${item}`}
+          width={300}
+          height={300}
+        />
       </div>
-    </>
-  )
+
+      <div style={styles.buttonRows}>
+        <div style={styles.buttonRow}>
+          <Link href="/produtos/Camisa">
+            <span style={styles.linkButton}>Camisa</span>
+          </Link>
+          <Link href="/produtos/calca">
+            <span style={styles.linkButton}>Calça</span>
+          </Link>
+          <Link href="/produtos/bone">
+            <span style={styles.linkButton}>Boné</span>
+          </Link>
+        </div>
+        <div style={styles.buttonRow}>
+          <Link href="/produtos/sapato">
+            <span style={styles.linkButton}>Sapato</span>
+          </Link>
+          <Link href="/produtos/oculos">
+            <span style={styles.linkButton}>Óculos</span>
+          </Link>
+          <Link href="/">
+            <span style={styles.linkButton}>Home</span>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 const styles = {
@@ -76,17 +62,19 @@ const styles = {
     overflow: 'hidden',
     marginBottom: '20px',
   },
-  linkList: {
-    listStyleType: 'none',
-    textAlign: 'left',
-    paddingLeft: 0,
+  buttonRows: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
-  linkListItem: {
+  buttonRow: {
+    display: 'flex',
+    justifyContent: 'center',
     marginBottom: '10px',
   },
   linkButton: {
-    backgroundColor: 'blue',
-    color: 'white',
+    backgroundColor: 'lightblue',
+    color: 'black',
     padding: '10px 20px',
     border: 'none',
     borderRadius: '5px',
@@ -94,6 +82,7 @@ const styles = {
     textDecoration: 'none',
     display: 'inline-block',
     cursor: 'pointer',
+    marginRight: '10px',
   },
   linkButtonHover: {
     backgroundColor: 'navy',
