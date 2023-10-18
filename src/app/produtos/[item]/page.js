@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Footer from '../../components/Footer/footer';
 
 export default function Produto({ params }) {
   const { item } = params;
@@ -41,7 +42,10 @@ export default function Produto({ params }) {
           </Link>
         </div>
       </div>
+      <Footer></Footer>
+
     </div>
+    
   );
 }
 

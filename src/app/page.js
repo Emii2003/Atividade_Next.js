@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Footer from './components/Footer/footer';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
           </Link>
         </li>
       </ul>
+      <Footer></Footer>
     </div>
   );
 };
